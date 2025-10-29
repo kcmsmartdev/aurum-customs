@@ -1,0 +1,9 @@
+@import '@fontsource/cal-sans';
+@import '@fontsource-variable/montserrat/wght-italic.css';
+@import "tailwindcss";
+
+
+@theme{
+     --font-Cal-sans: 'Cal Sans' , sans-serif;
+     --font-Montserrat: 'Montserrat', sans-serif;
+}

@@ -1,0 +1,63 @@
+---
+import "../styles/global.css";
+
+interface prop {
+	title: string,
+}
+const {title}= Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content="Aurum Customs SAC ofrece servicios de agenciamiento aduanero, comercio exterior y 
+		logística internacional. Soluciones seguras, rápidas y eficientes en importación y exportación en Perú.">
+		<meta name="author" content="Aurum Customs SAC">
+		<meta name="robots" content="index, follow">
+
+
+		<meta property="og:title" content="Aurum Customs SAC | Agencia de Aduanas y Logística Internacional en Perú">
+		<meta property="og:description" content="Soluciones aduaneras y logísticas integrales para tu negocio. Importación, exportación y asesoría en comercio exterior.">
+		<meta property="og:image" content="/images/og-image.jpg"> 
+		<meta property="og:url" content="https://aurumcustoms.pe/">
+		<meta property="og:type" content="website">
+		<meta property="og:locale" content="es_PE">
+
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Aurum Customs SAC | Agencia de Aduanas y Logística Internacional en Perú">
+		<meta name="twitter:description" content="Importación, exportación y soluciones aduaneras eficientes en todo el Perú.">
+		<meta name="twitter:image" content="/images/og-image.jpg">
+
+
+		<script type="application/ld+json">
+			{
+			"@context": "https://schema.org",
+			"@type": "Organization",
+			"name": "Aurum Customs SAC",
+			"url": "https://aurumcustoms.pe/",
+			"logo": "https://aurumcustoms.pe/logo.png",
+			"description": "Agencia de aduanas y operador logístico en Perú. Especialistas en importación, exportación y comercio exterior.",
+			"contactPoint": {
+				"@type": "ContactPoint",
+				"telephone": "+51 975 889 555",
+				"contactType": "customer service",
+				"areaServed": "PE",
+				"availableLanguage": ["Spanish"]
+			}
+			}
+		</script>
+
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="canonical" href="https://aurumcustoms.pe/">
+	</head>
+	<body>
+		
+		<slot />
+	</body>
+</html>
+

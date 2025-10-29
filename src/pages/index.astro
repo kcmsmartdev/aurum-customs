@@ -1,11 +1,144 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/MainLayout.astro";
+import Header from "../components/Header.astro";
+import videoBackground from "../assets/bg_video.webm"
+import imgBackground from "../assets/bg_movil.webp"
 
+
+
+//Aurum Customs SAC | Agencia de Aduanas y Logística Internacional en Perú 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const title = "Aurum Customs SAC | Agencia de Aduanas y Logística Internacional en Perú"
 ---
+<Layout {title}>
 
-<Layout>
-	<Welcome />
+    
+<div class="relative w-full">
+  
+  <!-- 🎥 Hero principal con bordes redondeados -->
+  <div class="relative w-full h-[725px] lg:h-[925px] rounded-b-[64px] lg:rounded-b-[128px]">
+    
+    <!-- 📦 Capa interior con overflow-hidden -->
+    <div class="relative w-full h-full overflow-hidden rounded-b-[64px] lg:rounded-b-[128px]">
+      <video 
+        autoplay 
+        muted 
+        loop 
+        playsinline 
+        class="hidden lg:flex absolute inset-0 w-full h-full object-cover z-1">
+        <source src={videoBackground} type="video/webm" />
+      </video>
+
+      <img src={imgBackground.src} class="flex lg:hidden absolute inset-0 w-full h-full object-cover z-0">
+
+      <div class="relative w-full z-10 text-white">
+        <Header />
+
+        <section class="container mx-auto flex flex-col items-start  mt-2 sm:mt-14 lg:mt-24 px-3">
+                    <div class="w-full bg-black/50 lg:w-[670px] p-5 px-5 py-10  rounded-4xl  ">
+                        <span class="py-2 px-3 bg-[#F2F2F2] text-[#FF8100] font-Montserrat font-light rounded-2xl mt-5 sm:mt-7">Líderes en Comercio Exterior</span>
+                        <h1 class="leading-10 text-[2.25rem]  sm:text-[2.5rem] md:text-[2.75rem] md:leading-14  lg:text-[3rem]  font-Cal-sans  mt-3 sm:mt-7">
+                            Asesoría y Gestión Aduanera <br class="hidden md:flex"> <strong class="text-[#FFA629]">Profesional</strong> para tu Negocio
+                        </h1>
+                        
+                        <p class="text-[1.25rem] mt-4 sm:mt-7 font-Montserrat font-normal">
+                            Simplificamos tus operaciones aduaneras con expertise, <br class="hidden lg:flex"> tecnología y 
+                            un servicio personalizado que impulsa tu <br class="hidden lg:flex"> negocio global.
+                        </p>
+
+                        <div class="flex flex-row space-x-5 mt-7 sm:mt-10">
+
+                            <button class="p-3 bg-[#FF8100] text-[0.875rem] rounded-2xl font-Montserrat font-medium">
+                                Solicitar Cotización
+                            </button>
+                            <button class="p-3 bg-[#ffff] text-[#0C0D26] text-[0.875rem] rounded-2xl font-Montserrat font-medium">
+                                Conocer servicios
+                            </button>
+
+                        </div>
+                    </div>
+             </section>
+      </div>
+
+      <div class="absolute inset-0 bg-black/50 z-2"></div>
+    </div>
+  </div>
+
+  <!-- 🟣 Bloque morado que sobresale -->
+  <div
+    class="hidden lg:flex flex-row absolute left-1/2 -translate-x-1/2 bg-[#4B44B4] lg:w-[950px] xl:w-[1200px] h-[193px] -bottom-20
+           z-20 rounded-[64px] shadow-2xl ">
+            <article>
+
+                
+            </article>
+        </div>
+
+</div>
+
+<div class="container mx-auto flex flex-col items-center mt-28 lg:mt-48 p-5">
+
+    <span class="w-fit p-2 bg-[#71D9FF] text-[#0C0D26] font-Cal-sans text-[1rem] rounded-2xl">Servicios integrales</span>
+    <h2 class="font-Cal-sans text-[2.25rem] text-center leading-12 mt-5">
+        Nuestros Servicios: Soluciones 360° para tu Cadena de <br class="hidden lg:flex"> Suministro
+    </h2>
+    <p class="font-Montserrat font-light text-[#4F4F4F] text-center mt-7 text-[1.25rem]">
+        Diseñamos una oferta de servicios completa para cubrir todas tus <br class="hidden lg:flex"> necesidades logísticas y aduaneras
+    </p>
+
+    <section class="container mx-auto px-5 py-20">
+  <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+    <!-- Card 1 -->
+    <div class="flex flex-col items-start text-[#0C0D26]">
+      <div class="w-full h-60 bg-gray-200 rounded-2xl"></div>
+      <h3 class="mt-5 font-Cal-sans text-[1.25rem]">
+        Agenciamiento de Aduanas Especializado
+      </h3>
+      <p class="mt-2 text-[#4F4F4F] font-Montserrat text-[1rem] leading-relaxed">
+        Gestionamos de forma experta todos los regímenes aduaneros contemplados en la Ley General de Aduanas 
+        (Decreto Legislativo N° 1053), asegurando el cumplimiento y la optimización de tus operaciones.
+      </p>
+      <button class="mt-5 px-5 py-2 border border-[#007AFF] text-[#007AFF] rounded-full font-Montserrat font-medium text-sm hover:bg-[#007AFF] hover:text-white transition-colors">
+        Saber más
+      </button>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="flex flex-col items-start text-[#0C0D26]">
+      <div class="w-full h-60 bg-gray-200 rounded-2xl"></div>
+      <h3 class="mt-5 font-Cal-sans text-[1.25rem]">
+        Asesoría y Consultoría en Comercio Exterior
+      </h3>
+      <p class="mt-2 text-[#4F4F4F] font-Montserrat text-[1rem] leading-relaxed">
+        Te guiamos en cada decisión. Ofrecemos consultoría especializada en comercio exterior, 
+        regulaciones aduaneras y optimización de procesos logísticos.
+      </p>
+      <button class="mt-5 px-5 py-2 border border-[#007AFF] text-[#007AFF] rounded-full font-Montserrat font-medium text-sm hover:bg-[#007AFF] hover:text-white transition-colors">
+        Saber más
+      </button>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="flex flex-col items-start text-[#0C0D26]">
+      <div class="w-full h-60 bg-gray-200 rounded-2xl"></div>
+      <h3 class="mt-5 font-Cal-sans text-[1.25rem]">
+        Servicios complementarios a su Disposición
+      </h3>
+      <p class="mt-2 text-[#4F4F4F] font-Montserrat text-[1rem] leading-relaxed">
+        Para ofrecerte una solución completa, coordinamos servicios complementarios clave 
+        para un mejor control dentro de los procesos logísticos.
+      </p>
+      <button class="mt-5 px-5 py-2 border border-[#007AFF] text-[#007AFF] rounded-full font-Montserrat font-medium text-sm hover:bg-[#007AFF] hover:text-white transition-colors">
+        Saber más
+      </button>
+    </div>
+  </div>
+</section>
+
+
+</div>
+
+    
+
 </Layout>
